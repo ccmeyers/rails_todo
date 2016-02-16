@@ -1,0 +1,12 @@
+<div class="tasks-index">
+  <div class="container">
+    <h1>To Do:</h1>
+    <div class="tasks-list">    
+      <% @tasks.each do |task| %>
+        <div class="task<% if task.completed %> completed<% end %>"><div class="priority"><%= task.priority %>. </div><%= task.body %></div>
+      <% end %>
+    </div>
+
+    <%= link_to 'Add a task', new_task_path %>
+  </div>
+</div>
